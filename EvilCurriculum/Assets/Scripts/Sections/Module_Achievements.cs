@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Module_Achievements : MonoBehaviour,IModule
 {
-    GameObject nextBtn;
-    GameObject backBtn;
     public GameObject section;
     private void Start() 
     {
-        nextBtn = GameObject.Find("Canvas/Achievements_UI/BtnNext");  
-        backBtn = GameObject.Find("Canvas/Achievements_UI/BtnBack");
         section.SetActive(false);   
     }
     public void DisableSection () 
@@ -24,25 +20,5 @@ public class Module_Achievements : MonoBehaviour,IModule
     {
         Debug.Log ("Activa Seccion");
         section.SetActive (true);
-    }
-
-    public void BtnNextText()
-    {
-        /*indexText = (indexText+1) % textUI.Length;
-        if(indexText == textUI.Length-1)
-        {
-            nextBtn.SetActive(false);
-        }
-        textStudio.text = textUI[indexText];*/
-    }
-
-    public void BtnBackText()
-    {
-        /*indexText = (indexText-1) % textUI.Length;
-        if(indexText == 0)
-        {
-            backBtn.SetActive(false);
-        }
-        textStudio.text = textUI[indexText];    */
     }
 }

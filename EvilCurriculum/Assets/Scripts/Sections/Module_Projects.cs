@@ -33,6 +33,9 @@ public class Module_Projects : MonoBehaviour, IModule {
     {
         Debug.Log ("Activa Seccion");
         section.SetActive (true);
+        textProject.text = textUI[indexText];
+        textTileProject.text = textTitleUI[indexText];
+        backgroundsProjects[indexText].SetActive(true);
     }
 
     public void BtnNextText()
