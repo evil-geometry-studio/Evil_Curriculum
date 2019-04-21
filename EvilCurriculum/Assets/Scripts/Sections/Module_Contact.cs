@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Module_Contact : MonoBehaviour,IModule
 {
-    GameObject nextBtn;
-    GameObject backBtn;
     public GameObject section;
     private void Start() 
     {
-        nextBtn = GameObject.Find("Canvas/Contact_UI/BtnNext");  
-        backBtn = GameObject.Find("Canvas/Contact_UI/BtnBack");
         section.SetActive(false);   
     }
     public void DisableSection () 

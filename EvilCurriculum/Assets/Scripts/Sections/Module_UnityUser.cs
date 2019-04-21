@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Module_UnityUser : MonoBehaviour
+public class Module_UnityUser : MonoBehaviour, IModule
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject section;
+    private void Start() 
     {
-        
+        section.SetActive(false);   
+    }
+    public void DisableSection () 
+    {
+        Debug.Log ("Desactiva seccion");
+        section.GetComponent<Animator> ().SetTrigger ("change");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnableSection () 
     {
-        
+        Debug.Log ("Activa Seccion");
+        section.SetActive (true);
     }
 }
